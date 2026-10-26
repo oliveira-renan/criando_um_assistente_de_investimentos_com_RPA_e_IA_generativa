@@ -97,38 +97,19 @@ O catálogo de investimentos foi organizado por perfil de adequação (*suitabil
 
 ---
 
-## 🚀 Como Executar o Projeto
+## 🚀 Como Executei o Projeto
 
-### Etapa 1: Configurar e Subir o N8N
+### Etapa 1: Configurei e Subi o N8N
 
-Você pode utilizar o **N8N Cloud** (gratuito para testes) ou rodar localmente via Docker:
+Utilizei o **N8N Cloud** (gratuito para testes):
 
 ```bash
-# Executando n8n localmente com Docker
-docker run -it --rm --name n8n -p 5678:5678 -v ~/.n8n:/home/node/.n8n n8nio/n8n
-```
-
-1. Acesse o painel do N8N (`http://localhost:5678` ou sua instância em nuvem).
-2. No menu lateral, clique em **Workflows** > **Import from File**.
-3. Selecione o arquivo desejado:
-   - Para o MVP: [`n8n/workflow.json`](file:///n8n/workflow.json)
-   - Para o Desafio com IA: [`n8n/workflow_ia.json`](file:///n8n/workflow_ia.json)
-4. Abra o nó **Webhook - Receber Clientes (RPA)** e copie a **Test URL** ou a **Production URL** gerada.
+[N8N](https://renan-oliveira.app.n8n.cloud/workflow/3so1lR6E1oa21gG1?projectId=nakX2zOzv6Ij7EiG).
 
 ---
 
-### Etapa 2: Executar o Robô RPA em Python
-
-#### Opção A: Executar no Google Colab
-1. Acesse o [Google Colab]([https://colab.research.google.com/drive/1HmrfzOoINCwgMleRqhtoUzFlCwofyDjJ#scrollTo=x9QBVXviwMM]).
-2. Faça o upload do arquivo [`src/extrair_clientes.ipynb`](file:///src/extrair_clientes.ipynb).
-3. Na célula final, insira a URL do seu Webhook do N8N na variável `N8N_WEBHOOK_URL`.
-4. Execute as células em sequência.
-
-#### Opção B: Executar via Linha de Comando (CLI)
-Instale as dependências:
-```bash
-pip install requests beautifulsoup4 pandas
+### Etapa 2: Executei o Robô RPA no Google Colab
+[Google Colab](https://colab.research.google.com/drive/13A8bIbsY4gRL6_2y_NA09Fu1qSF_yXbb?usp=sharing).
 ```
 
 Execute o script apontando para o seu Webhook:
@@ -198,8 +179,5 @@ O script executa o pipeline ponta a ponta e exibe no terminal as mensagens forma
 
 ---
 
-## 📜 Licença
-
-Distribuído sob a licença MIT. Consulte o arquivo de licença para obter mais informações.
 
 Desenvolvido para o desafio **DIO - Criando um Assistente de Investimentos com RPA e IA Generativa**.
