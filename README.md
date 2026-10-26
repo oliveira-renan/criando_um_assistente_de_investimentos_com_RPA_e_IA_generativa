@@ -120,7 +120,7 @@ docker run -it --rm --name n8n -p 5678:5678 -v ~/.n8n:/home/node/.n8n n8nio/n8n
 ### Etapa 2: Executar o Robô RPA em Python
 
 #### Opção A: Executar no Google Colab
-1. Acesse o [Google Colab](https://colab.research.google.com/).
+1. Acesse o [Google Colab]([https://colab.research.google.com/drive/1HmrfzOoINCwgMleRqhtoUzFlCwofyDjJ#scrollTo=x9QBVXviwMM]).
 2. Faça o upload do arquivo [`src/extrair_clientes.ipynb`](file:///src/extrair_clientes.ipynb).
 3. Na célula final, insira a URL do seu Webhook do N8N na variável `N8N_WEBHOOK_URL`.
 4. Execute as células em sequência.
