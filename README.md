@@ -99,40 +99,31 @@ O catálogo de investimentos foi organizado por perfil de adequação (*suitabil
 
 ## 🚀 Como Executei o Projeto
 
-### Etapa 1: Configurei e Subi o N8N
+### 🌐 Etapa 1: Configuração do N8N
 
-Utilizei o **N8N Cloud** (gratuito para testes):
+Para a orquestração e automação do fluxo, utilizei o **N8N Cloud**:
 
-```bash
-[N8N](https://renan-oliveira.app.n8n.cloud/workflow/3so1lR6E1oa21gG1?projectId=nakX2zOzv6Ij7EiG).
+* 🔗 **Workflow no N8N:** [Acessar Projeto N8N](https://renan-oliveira.app.n8n.cloud/workflow/3so1lR6E1oa21gG1?projectId=nakX2zOzv6Ij7EiG)
 
----
-
-### Etapa 2: Executei o Robô RPA no Google Colab
-[Google Colab](https://colab.research.google.com/drive/13A8bIbsY4gRL6_2y_NA09Fu1qSF_yXbb?usp=sharing).
-```
-
-Execute o script apontando para o seu Webhook:
-```bash
-python src/extrair_clientes.py --webhook "https://sua-instancia.n8n.cloud/webhook/assistente-investimentos"
-```
-
-> **Dica:** Se desejar testar a extração diretamente com o arquivo HTML local, utilize:
-> ```bash
-> python src/extrair_clientes.py --url docs/index.html
-> ```
+> **Passo a passo para importação manual:**
+> 1. Acesse o painel do seu N8N.
+> 2. Vá em **Workflows** > **Import from File**.
+> 3. Selecione o arquivo [`n8n/workflow.json`](n8n/workflow.json) ou [`n8n/workflow_ia.json`](n8n/workflow_ia.json).
+> 4. Abra o nó **Webhook - Receber Clientes (RPA)** para obter sua URL de execução.
 
 ---
 
-### Etapa 3: Validação Imediata Local (Sem Dependências Externas)
+### 🤖 Etapa 2: Execução do Robô RPA
 
-Para validar a lógica completa de extração, cruzamento e geração de mensagens sem necessidade de subir servidores ou instalar pacotes externos:
+O script de extração e tratamento dos dados pode ser executado e validado diretamente na nuvem:
 
-```bash
-python src/testar_fluxo_local.py
-```
+* 🚀 **Ambiente de Execução:** [Abrir Notebook no Google Colab](https://colab.research.google.com/drive/13A8bIbsY4gRL6_2y_NA09Fu1qSF_yXbb?usp=sharing)
 
-O script executa o pipeline ponta a ponta e exibe no terminal as mensagens formatadas para cada perfil de cliente.
+
+---
+
+
+### O script executa o pipeline ponta a ponta e exibe no terminal as mensagens formatadas para cada perfil de cliente.
 
 ---
 
